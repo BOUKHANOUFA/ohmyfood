@@ -14,8 +14,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-</head>
+ 
+  <link rel="stylesheet" href="style.css">
+  
+  </head>
 <body>
   
     <header>
@@ -23,7 +25,8 @@
         <h1 class="header">ohmyfood</h1>
        
     </header>
-  <main>
+ <main>
+    <!--licalisation-->
     <section class="localisation">
   <form class="localisation__form">
     <i class="fa-solid fa-location-dot"></i>
@@ -39,10 +42,10 @@
   <h2>Réservez le menu qui <br> vous convient</h2>
   <p>Découvrez des restaurants d'exception,<br>sélectionnés par nos soins.</p>
   <button class="gradient" >Explorer nos restaurants</button>
-
+<!--fonctionnement-->
 </section>
 <section class="fonctionnement">
-<h3 class="h3">Fonctionnement</h3>
+<h3 class="section-title">Fonctionnement</h3>
   
   <ol class="fonctionnement__list">
 <li class="fonctionnement__item">
@@ -55,26 +58,27 @@
   <i class="fonctionnement__item-listul fa-solid fa-list-ul"></i>
   <span>Coposez votre menu</span>
 </li>
-<li class="fonctionnement__item ">
+<li class="fonctionnement__item">
   <span class="fonctionnement__number">3</span>
   <i class="fonctionnement__item-store fa-solid fa-store"></i> 
   <span>Dégustez au restaurant</span>
 </li>
 </ol>
 </section>
+<!--restaurant-->
 <section class="restaurants">
-<h4 class="restaurants-h4">Restaurants</h4>
+<h3 class="section-title ">Restaurants</h3>
 
 <div class="restaurants-cards">
   <!--restaurant 1-->
   <article>
-<a href="#" class="card">
+<a href="#" class="card ">
 
   <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo du restaurant la palette du goût">
 
 <div >
 
-    <h3 class="restaurants-h3">La palette du goût</h3>
+    <h4 class="restaurants-h4 ">La palette du goût</h4>
     <i class=" restaurants-card__like fa-regular fa-heart"></i>
     <p class="restaurants-p">Ménilmontant</p>
     </div>
@@ -94,7 +98,7 @@
 
 <div>
 
-    <h3 class="restaurants-h3">La note enchantée</h3>
+    <h4 class="restaurants-h4">La note enchantée</h4>
     <i class=" restaurants-card__like fa-regular fa-heart"></i>
     <p class="restaurants-p">Charonne</p>
     </div>
@@ -112,7 +116,7 @@
 
 <div >
   </div>
-    <h3 class="restaurants-h3">À la française</h3>
+    <h4 class="restaurants-h4">À la française</h4>
      <i class=" restaurants-card__like fa-regular fa-heart"></i>
     <p class="restaurants-p">Cité Rouge</p>
    
@@ -127,30 +131,38 @@
 
   <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo du restaurant le délice des sens">
 
-<div class="restaurants-card__content">
-  </div>
-    <h3 class="restaurants-h3">Le délice des sens</h3>
-    <i class=" restaurants-card__like fa-regular fa-heart"></i>
+    <div>
+    </div>
+    <h4 class="restaurants-h4">Le délice des sens</h4>
+   <i class=" restaurants-card__like fa-regular fa-heart"></i>
     <p class="restaurants-p">Folie-Méricourt</p>
-    
-  </div>
+    </div>
+ 
 </a>
 </div>
 </article>
  </section>
  </main>
  <footer class="footer">
-  <h4 class="footer-h4">ohmyfood</h4>
+  <h5 class="footer-h5">ohmyfood</h5>
   
-  <i class="fa-solid fa-utensils"></i>
-  <p>Proposer un restaurant</p>
-<i class="fa-solid fa-handshake-angle"></i>
-<p>Devenir partenaire</p>
-<p>Mention légales</p>
-<p>
-  <a class="footer-contact" href="#">Contact</a></p>
-  
- </footer>
-  
+  <ul class="footer-links">
+  <li>
+    <i class="fa-solid fa-utensils"></i>
+    <a href="#">Proposer un restaurant</a>
+  </li>
+  <li>
+    <i class="fa-solid fa-handshake-angle"></i>
+    <a href="#">Devenir partenaire</a>
+  </li>
+  <li>
+    <a href="#">Mention légales</a>
+  </li>
+  <li>
+    <a class="footer-contact" href="#">Contact</a>
+  </li>
+</ul>
+
+</footer>
 </body>
 </html>

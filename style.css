@@ -3,16 +3,20 @@
 ::before,
 ::after {
   box-sizing: border-box;
+}
+* body,
+::before body,
+::after body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}
 
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
  
 }
 
- body {
-  font-family: "Roboto", sans-serif;
- 
-  margin: 0;
-  
-   }
 .header {
   font-family: "Shrikhand", serif;
   display: flex;
@@ -25,100 +29,93 @@
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
+
 .localisation {
   display: flex;
- 
   justify-content: center;
   align-items: center;
-  background-color:#EAEAEA;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  background-color: #EAEAEA;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25); 
+  
   margin: 0;
-}  
+}
+
 .localisation__form {
   display: flex;
   align-items: center;
   justify-content: center;
-  
   height: 50px;
- 
-  gap:17px;
-
+  gap: 17px;
 }
 
 .localisation__form input {
-  
   border: none;
-  background-color:#EAEAEA ;
- 
+  background-color: #EAEAEA;
   width: 100%;
   height: 100%;
   font-size: 16px;
 }
- 
+
 /* Icône */
 .localisation__form i {
-  color: #353535;            
+  color: #353535;
   font-size: 16px;
 }
+
 .exploration {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
-background-color: #f6f6f6;
-
-
+  background-color: #f6f6f6;
 }
-.exploration h2{
+
+.exploration h2 {
   font-size: 24px;
   font-weight: 700;
   margin-top: 40px;
 }
-.exploration p{
-font-size: 18px;
-font-weight: 300;
 
-}  
+.exploration p {
+  font-size: 18px;
+  font-weight: 300;
+}
 
 .gradient {
-  height:50px ;
-  width:218px ;
+  height: 50px;
+  width: 218px;
   border-radius: 25px;
-  background-image: linear-gradient(to top,#FF79DA,#9356DC);
-border: none;
-margin-top: 15px;
-margin-bottom:60px;
-font-size: 16px;
-font-weight: 500;
-color: white;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) ;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 60px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-.fonctionnement{
+
+.fonctionnement {
   display: flex;
   flex-direction: column;
- align-items: center;
-margin-top: 15px;
-margin-bottom: 0;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
-  
 
-.fonctionnement h3{
-display: flex;
-  margin-top: 48px;
-  margin-left: 20px;
-  margin-right: 80px;
+.section-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right:90px;
   font-size: 24px;
   font-weight: 700;
-  align-items:start;
-  justify-content: right;
+  align-items: center;
  
-  
 }
 
-  
-
-.fonctionnement__item{
+.fonctionnement__item {
   position: relative;
   display: flex;
   align-items: center;
@@ -127,39 +124,40 @@ display: flex;
   height: 72px;
   border-radius: 20px;
   background-color: #f6f6f6;
-   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-   border: none;
-   margin-top: 25px;
-   font-size: 16px;
-   font-weight: 500;
-   
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 500;
 }
-.fonctionnement__item span{
-  font-size:16px;
-  font-weight:500;
- 
-}
-.fonctionnement__item i{
-  margin-right: 20px;
 
+.fonctionnement__item span {
+  font-size: 16px;
+  font-weight: 500;
 }
-.fonctionnement__item-mobile{
+
+.fonctionnement__item i {
+  margin-right: 20px;
+}
+
+.fonctionnement__item-mobile {
   font-size: 19px;
   color: #7e7e7e;
-
 }
-.fonctionnement__item-listul{
+
+.fonctionnement__item-listul {
   font-size: 17px;
   color: #7e7e7e;
 }
-.fonctionnement__item-store{
+
+.fonctionnement__item-store {
   font-size: 18px;
   color: #9356DC;
- 
 }
-.fonctionnement__number{
+
+.fonctionnement__number {
   position: absolute;
- left: -10px;
+  left: -10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,53 +169,40 @@ display: flex;
   font-weight: 500;
   line-height: 1;
   border-radius: 50px;
-  
 }
+
 /*restaurants*/
-
-.restaurants{
-display: flex;
-
-flex-direction: column;
-align-items: center;
-background-color: #f6f6f6;
-padding-bottom: 50px;
- width: 100%;
-
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding-bottom: 50px;
+  width: 100%;
 }
 
-.restaurants-cards .card{
+.restaurants-cards{
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  width: 350px;
-
-
-}
-.restaurants-cards img{
- 
-  width: 100%;
-  object-fit: cover;
+  width: 346px;
   
- height: 251px;
- 
+
 }
 
 .restaurants-h4 {
-align-items: start;
+  margin-left: 13px;
+  margin-bottom: 0;
+  font-size:18px ;
+  font-weight:700;
 
-font-size: 24px;
-font-weight: 700;
 }
-.restaurants-h3{
-margin-left: 13px;
-margin-bottom: 0;
-}
-.restaurants-p{
+
+.restaurants-p {
   margin-top: 0;
-  margin-bottom:15px;
+  margin-bottom: 15px;
   margin-left: 13px;
   font-size: 17px;
   font-weight: 300;
@@ -227,41 +212,59 @@ margin-bottom: 0;
   text-decoration: none;
   color: inherit;
   margin-bottom: 18px;
+  
+ 
 }
-.restaurants-card__like{
-  display: flex;
-  justify-content: end; 
-  margin-bottom: 0;
-  margin-top: 0;
-  margin-right: 25px;
-
-font-size: 22px;
+.restaurants-card__like {
+  
+  font-size: 22px;
 
 }
-.footer{
+
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   background-color: #353535;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  padding-left: 25px;
-  padding-right: 25px;
+ padding: 22px 25px;
   gap: 16px;
   color: white;
+
 }
-.footer-h4{
-   font-family: "Shrikhand", serif;
-   justify-content: center;
+
+
+.footer-h5 {
+  font-family: "Shrikhand", serif;
+  margin-bottom: 0;
+  margin-top: 0;
   align-items: center;
   font-size: 18px;
   font-weight: 400;
-}
-.footer-contact{
-  text-decoration: none;
-  color: white;
-}
-.footer-ul{
   
+  }
+.footer-links {
+  list-style: none;   
+  padding-left: 50px;    
+  margin: 0; 
+  width: 100%; 
+  max-width: 400px;        
+}
+
+.footer-links li {
+  display: flex;      
+  align-items: center;
+  gap: 16px;           
+  margin-bottom: 10px;
+}
+
+.footer-links li a,
+.footer-contact {
+  text-decoration: none; 
+  color: white;         
+}
+
+.footer-links li i {
+  font-size: 18px;      
+  color: white;       
 }
