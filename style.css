@@ -81,7 +81,7 @@ body {
   font-size: 18px;
   font-weight: 300;
 }
-.btn {
+.btn-home {
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -269,14 +269,14 @@ body {
   font-family: "Shrikhand", serif;
   margin-bottom: 0;
   margin-top: 0;
-  align-items: center;
+  
   font-size: 18px;
   font-weight: 400;
   
   }
 .footer-links {
   list-style: none;   
-  padding-left: 50px;    
+  
   margin: 0; 
   width: 100%; 
   max-width: 400px;        
@@ -300,12 +300,13 @@ body {
   color: white;       
 }
 .goback{
- flex-shrink: 0;
- display: inline-block;
+
+ 
  font-size: 30px;
- margin-left: 17px;
- margin-right: 42px;
- width: 17px;
+
+ 
+ left: 17px;
+ 
  cursor: pointer;
  position: absolute;
  top: 14px;
@@ -325,6 +326,7 @@ body {
   height: 275px;
   object-fit: cover;  
   display: block; 
+  margin: auto;
 
 }
 .title-shrikhand{
@@ -338,15 +340,91 @@ body {
   gap: 10px;
 
 }
-.p-menu{
+.h3-menu{
 width: 275px; 
 height: 27px;
-
+margin-top: 40px;
+margin-bottom: 12px;
 font-family: Roboto;
 font-size: 16px;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
 
+
 text-align: start;
+}
+.trait {
+  display: inline-block;
+  width:40px;
+  border-bottom: 3px solid #99E2D0;
+  margin-bottom: 12px;
+}
+
+.card-menu{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  
+  
+  width: 349px;
+  height: 69px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  height: auto;
+  padding: 15px;
+  box-shadow: 0 4.011px 15.043px 0 rgba(0, 0, 0, 0.10);
+}
+.h4-menu{
+overflow: hidden;
+color: #000;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+font-size: 18px;
+
+font-weight: 700;
+line-height: normal;
+margin: 0 0 5px 0;
+}
+.p-menu{
+overflow: hidden;
+color: #000;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: norma;
+margin:0;
+flex: 1;
+
+}
+.price-menu{
+  font-size: 15px;
+   font-weight: 700;
+  
+}
+.btn-menu {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  height: 50px;
+  width: 186px;
+  border-radius: 25px;
+  border: none;
+
+}
+
+.btn-secondary{
+ 
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  
+  
+  margin-top: 40px;
+  margin-bottom: 40px;
+ 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
