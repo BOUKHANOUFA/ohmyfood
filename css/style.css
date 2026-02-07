@@ -5,16 +5,10 @@
   box-sizing: border-box;
 }
 
-* body,
-::before body,
-::after body {
-  background-color: lightblue;
-  font-family: Arial, sans-serif;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
+  background-color: #f6f6f6;
 }
 
 .header {
@@ -28,6 +22,7 @@ body {
   margin: 0 auto;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 .main {
@@ -310,7 +305,8 @@ body {
   align-items: center;
   background-color: #f6f6f6;
   width: 100%;
-  border-radius: 40px 40px 0 0;
+ 
+  border-radius:40px 40px 0 0;
 }
 .menu-img {
   width: 375px;
