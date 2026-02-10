@@ -20,7 +20,7 @@ $grey-dark: #353535;
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  background-color: $grey-light;
+  background-color:white;
  }
 .header {
   font-family: "Shrikhand", serif;
@@ -98,11 +98,13 @@ body {
 .section-title {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-right:90px;
+  padding-left: 20px;
+
   font-size: 24px;
   font-weight: 700;
-  align-items: center;
+  line-height: normal;
+  font-style: normal;
+  
  }
 .fonctionnement__item {
   position: relative;
@@ -156,24 +158,23 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: $grey-light;
-  padding-bottom: 50px;
+  padding:0 16px 50px;
   width: 100%;
 }
 .restaurants-cards{
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-}
-.card {
+  max-width: 340px;
   text-decoration: none;
   color: inherit;
   margin-bottom: 18px;
+
 }
 .restaurant-img {
-  width: 346px;       
-  height: 231px;      
+  width:100%;       
+  height:251px;      
   object-fit: cover;  
   display: block; 
   }    
@@ -184,7 +185,7 @@ body {
 .new::before {
  content: "Nouveau";
   position: absolute;
- 
+  
   width: 80px;
   height: 29px;
   top:13px;
@@ -194,7 +195,13 @@ body {
   text-align:center;
   font-weight: 500;
   font-size: 14px;
+  @include flex-center ;
   }
+  .restaurants-cards a {
+  text-decoration: none; 
+  color: inherit;      
+}
+
 .restaurants-h4 {
   margin-left: 13px;
   margin-bottom: 0;
@@ -219,19 +226,22 @@ body {
   padding: 22px 25px;
   gap: 16px;
   color: white;
-  @include flex-center ;
+  
 }
 .footer-h5 {
+  text-align: start;
   font-family: "Shrikhand", serif;
   margin-bottom: 0;
   margin-top: 0;
   font-size: 18px;
   font-weight: 400;
-   }
+  
+  }
 .footer-links {
   list-style: none;   
   margin: 0; 
-  width: 100%; 
+  padding: 0;
+  line-height: normal;
   max-width: 400px;        
 }
 .footer-links li {
