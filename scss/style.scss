@@ -12,8 +12,8 @@ $grey-dark: #353535;
   align-items: center;
 }
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -81,6 +81,7 @@ body {
   width: 218px;
   border-radius: 25px;
   border: none;
+   transition: background-image 300ms ease-out, box-shadow 300ms ease-out, transform 300ms ease-out;
 }
 .btn-primary{
  background-image: linear-gradient(to top, $secondary, $primary );
@@ -88,22 +89,32 @@ body {
   margin-bottom: 60px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+.btn-home:hover,
+.btn-home:focus {
+  background-image: linear-gradient(to top , #ff95e3 ,#a078e0) ;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+  cursor: pointer;
+}
 .fonctionnement {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 15px;
   margin-bottom: 0;
+  padding-bottom: 50px;
 }
 .section-title {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
-
+  width: 100%;
+  margin-right: 90px;
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
   font-style: normal;
+  padding-left: 50px;
   
  }
 .fonctionnement__item {
@@ -158,11 +169,12 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: $grey-light;
-  padding:0 16px 50px;
+  padding-top: 30px;
   width: 100%;
 }
 .restaurants-cards{
   width: 100%;
+  flex-direction: column;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
@@ -174,7 +186,7 @@ body {
 }
 .restaurant-img {
   width:100%;       
-  height:251px;      
+  height:231px;      
   object-fit: cover;  
   display: block; 
   }    
@@ -203,24 +215,28 @@ body {
 }
 
 .restaurants-h4 {
-  margin-left: 13px;
+ 
   margin-bottom: 0;
   font-size:18px ;
   font-weight:700;
 }
 .restaurants-p {
-  margin-top: 0;
-  margin-bottom: 15px;
-  margin-left: 13px;
+  margin: 0;
   font-size: 17px;
   font-weight: 300;
 }
 .heart {
-  width: 22px;
-  height: 21px;
+  
   font-size: 22px;
 }
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+}
 .footer {
+  display: flex;
   flex-direction: column;
   background-color: $grey-dark ;
   padding: 22px 25px;
@@ -235,7 +251,7 @@ body {
   margin-top: 0;
   font-size: 18px;
   font-weight: 400;
-  
+  gap: 16px;
   }
 .footer-links {
   list-style: none;   
@@ -286,13 +302,15 @@ body {
   margin: auto;
 }
 .title-shrikhand{
+  display: flex;
+  align-items: center;
   font-family: "Shrikhand", serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-align: start;
-  gap: 10px;
+  gap: 25px;
 }
 .h3-menu{
 width: 275px; 
@@ -333,7 +351,7 @@ white-space: nowrap;
 font-size: 18px;
 font-weight: 700;
 line-height: normal;
-margin: 0 0 5px 0;
+margin: 0 ;
 }
 .p-menu{
 overflow: hidden;
@@ -352,6 +370,11 @@ flex: 1;
   font-size: 15px;
   font-weight: 700;
 }
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+}
 .btn-menu {
   font-size: 16px;
   font-weight: 500;
@@ -360,10 +383,19 @@ flex: 1;
   width: 186px;
   border-radius: 25px;
   border: none;
+  transition: background-image 300ms ease-out, box-shadow 300ms ease-out, transform 300ms ease-out;
 }
+
 .btn-secondary{
   background-image: linear-gradient(to top, $secondary , $primary );
   margin-top: 40px;
   margin-bottom: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.btn-menu:hover,
+.btn-menu:focus {
+  background-image: linear-gradient(to top , #ff95e3 ,#a078e0) ;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+  cursor: pointer;
 }
