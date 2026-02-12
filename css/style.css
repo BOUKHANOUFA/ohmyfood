@@ -1,6 +1,6 @@
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -416,6 +416,7 @@ body {
   width: 186px;
   border-radius: 25px;
   border: none;
+  transition: background-image 300ms ease-out, box-shadow 300ms ease-out, transform 300ms ease-out;
 }
 
 .btn-secondary {
@@ -424,5 +425,12 @@ body {
   margin-bottom: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+.btn-menu:hover,
+.btn-menu:focus {
+  background-image: linear-gradient(to top , #ff95e3 ,#a078e0) ;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
-/*# sourceMappingURL=style.css.map */
+
