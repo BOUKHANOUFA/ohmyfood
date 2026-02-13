@@ -44,7 +44,7 @@ body {
 .localisation__form {
   height: 50px;
   gap: 17px;
-@include flex-center;
+  @include flex-center;
   input {
     border: none;
     background-color: #EAEAEA;
@@ -81,7 +81,7 @@ body {
   width: 218px;
   border-radius: 25px;
   border: none;
-   transition: background-image 300ms ease-out, box-shadow 300ms ease-out, transform 300ms ease-out;
+  transition: background-image 300ms ease-out, box-shadow 300ms ease-out, transform 300ms ease-out;
 }
 .btn-primary{
  background-image: linear-gradient(to top, $secondary, $primary );
@@ -89,8 +89,7 @@ body {
   margin-bottom: 60px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-.btn-home:hover,
-.btn-home:focus {
+.btn-home:hover{
   background-image: linear-gradient(to top , #ff95e3 ,#a078e0) ;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
@@ -107,7 +106,6 @@ body {
 .section-title {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
   width: 100%;
   margin-right: 90px;
   font-size: 24px;
@@ -197,7 +195,7 @@ body {
 .new::before {
  content: "Nouveau";
   position: absolute;
-  
+  line-height: normal;
   width: 80px;
   height: 29px;
   top:13px;
@@ -215,8 +213,7 @@ body {
 }
 
 .restaurants-h4 {
- 
-  margin-bottom: 0;
+  margin: 0;
   font-size:18px ;
   font-weight:700;
 }
@@ -226,7 +223,6 @@ body {
   font-weight: 300;
 }
 .heart {
-  
   font-size: 22px;
 }
 .card-content {
@@ -242,8 +238,7 @@ body {
   padding: 22px 25px;
   gap: 16px;
   color: white;
-  
-}
+  }
 .footer-h5 {
   text-align: start;
   font-family: "Shrikhand", serif;
@@ -290,7 +285,7 @@ body {
 .menu{
   flex-direction: column;
   background-color: $grey-light;
-  margin-top: -40px;
+ 
   border-radius: 40px 40px 0 0;
   @include flex-center ;
   }
@@ -332,6 +327,7 @@ text-align: start;
 }
 .card-menu{
   display: flex;
+  align-items: self-end;
   flex-direction:column;
   justify-content: space-between;
   width: 349px;
@@ -339,7 +335,6 @@ text-align: start;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 10px;
-  
   padding: 15px;
   box-shadow: 0 4.011px 15.043px 0 rgba(0, 0, 0, 0.10);
 }
@@ -351,7 +346,7 @@ white-space: nowrap;
 font-size: 18px;
 font-weight: 700;
 line-height: normal;
-margin: 0 ;
+margin: 0;
 }
 .p-menu{
 overflow: hidden;
@@ -392,9 +387,12 @@ flex: 1;
   margin-bottom: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-.btn-menu:hover,
-.btn-menu:focus {
-  background-image: linear-gradient(to top , #ff95e3 ,#a078e0) ;
+.btn-menu:hover{
+  background-image: linear-gradient(
+    to top,
+    lighten(#FF79DA, 15%),
+    lighten(#9356DC, 15%)
+  );
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
   cursor: pointer;
