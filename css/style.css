@@ -112,13 +112,11 @@ body {
 .section-title {
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin-right: 90px;
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
   font-style: normal;
-  padding-left: 50px;
 }
 
 .fonctionnement__item {
@@ -185,6 +183,7 @@ body {
   background-color: #f6f6f6;
   padding-top: 30px;
   width: 100%;
+  padding-bottom: 50px;
 }
 
 .restaurants-cards {
@@ -246,8 +245,24 @@ body {
   font-weight: 300;
 }
 
-.heart {
+.heart-regular {
+  position: absolute;
   font-size: 22px;
+}
+
+.heart-solid {
+  opacity: 0;
+  font-size: 22px;
+  transition: all 700ms ease-out;
+  position: relative;
+}
+
+.heart-solid:active {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .card-content {
@@ -331,6 +346,18 @@ body {
   object-fit: cover;
   display: block;
   margin: auto;
+}
+
+.title-coeur {
+  position: relative;
+  width: 22px;
+  height: 22px;
+}
+
+.title-coeur .heart-regular,
+.title-coeur .heart-solid {
+  position: absolute;
+  font-size: 22px;
 }
 
 .title-shrikhand {
@@ -422,7 +449,7 @@ body {
   width: 186px;
   border-radius: 25px;
   border: none;
-  transition: background-image 300ms ease-out, box-shadow 300ms ease-out, transform 300ms ease-out;
+  transition: all 300ms;
 }
 
 .btn-secondary {
