@@ -5,6 +5,7 @@ $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $grey-light: #f6f6f6;
 $grey-dark: #353535;
+@use "sass:color";
 
 @mixin flex-center {
   display: flex;
@@ -52,8 +53,7 @@ body {
     height: 100%;
     font-size: 16px;
   }
-
-  i {
+i {
     color: $grey-dark;
     font-size: 16px;
   }
@@ -73,6 +73,7 @@ body {
   font-size: 18px;
   font-weight: 300;
 }
+/*ANIMATION*/
 .btn-home {
   font-size: 16px;
   font-weight: 500;
@@ -81,7 +82,7 @@ body {
   width: 218px;
   border-radius: 25px;
   border: none;
-  transition: background-image 300ms ease-out, box-shadow 300ms ease-out, transform 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 .btn-primary{
  background-image: linear-gradient(to top, $secondary, $primary );
@@ -106,13 +107,11 @@ body {
 .section-title {
   display: flex;
   flex-direction: column;
-  
   margin-right: 90px;
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
   font-style: normal;
- 
  }
 .fonctionnement__item {
   position: relative;
@@ -131,7 +130,6 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
-
 .fonctionnement__item i {
   margin-right: 20px;
 }
@@ -180,9 +178,7 @@ body {
   text-decoration: none;
   color: inherit;
   margin-bottom: 18px;
-  
-
-}
+  }
 .restaurant-img {
   width:100%;       
   height:231px;      
@@ -206,14 +202,12 @@ body {
   text-align:center;
   font-weight: 500;
   font-size: 14px;
-  
-@include flex-center ;
+  @include flex-center ;
   }
   .restaurants-cards a {
   text-decoration: none; 
   color: inherit;      
 }
-
 .restaurants-h4 {
   margin: 0;
   font-size:18px ;
@@ -227,26 +221,21 @@ body {
 .heart-regular{
   position: absolute;
   font-size: 22px;
- 
- 
-}
+ }
+ /*ANIMATION*/
 .heart-solid{
   opacity: 0;
   font-size: 22px;
-  
   transition: all 700ms ease-out;
   position: relative;
-
-
 }
 .heart-solid:active{
 opacity: 1;
 color: transparent;
-background-image: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+background-image: linear-gradient(193deg,  $primary 11.44%, $secondary 123.93%);
 background-clip: text;
 -webkit-background-clip: text;
 }
-
 .card-content {
   display: flex;
   justify-content: space-between;
@@ -307,7 +296,6 @@ background-clip: text;
 .menu{
   flex-direction: column;
   background-color: $grey-light;
- 
   border-radius: 40px 40px 0 0;
   @include flex-center ;
   }
@@ -357,10 +345,10 @@ text-align: start;
   border-bottom: 3px solid $tertiary;
   margin-bottom: 12px;
 }
-.card-menu{
+.card-menu {
+  position: relative;
   display: flex;
-  align-items: self-end;
-
+  align-items: center;
   justify-content: space-between;
   width: 349px;
   height: 69px;
@@ -368,40 +356,64 @@ text-align: start;
   border-radius: 15px;
   margin-bottom: 10px;
   padding: 15px;
-  box-shadow: 0 4.011px 15.043px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
 }
-.h4-menu{
-overflow: hidden;
-color: #000;
-text-overflow: ellipsis;
-white-space: nowrap;
-font-size: 18px;
-font-weight: 700;
-line-height: normal;
-margin: 0;
+/* ANIMATIONS */
+@keyframes slidecheck {
+  from {
+    right: -59px;
+  }
+  to {
+    right: 0;
+  }
 }
-.p-menu{
-overflow: hidden;
-color: #000;
-text-overflow: ellipsis;
-white-space: nowrap;
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-margin:0;
-flex: 1;
+@keyframes moveprice {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-59px);
+  }
 }
-.price-menu{
+.price-menu {
   font-size: 15px;
   font-weight: 700;
+  white-space: nowrap;
 }
-.menu-info {
+.check-box {
+  position: absolute;
+  top: 0;
+  right: -59px;
+  width: 59px;
+  height: 69px;
+  background-color: #99E2D0;
+  @include flex-center ;
+}
+.check-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
   display: flex;
-  flex-direction: column;
-  gap: 5px; 
+  align-items: center;
+  justify-content: center;
 }
+.check-box i {
+  color: #99E2D0;
+  font-size: 16px;
+}
+.card-menu:hover .check-box {
+  animation: slidecheck 250ms forwards ease-out;
+}
+.card-menu:hover .price-menu {
+  animation: moveprice 250ms forwards ease-out;
+}
+.card-menu:hover .check-box i {
+  animation: rotateicon 250ms forwards ease-out;
+}
+/*ANIMATION*/
 .btn-menu {
   font-size: 16px;
   font-weight: 500;
@@ -412,7 +424,6 @@ flex: 1;
   border: none;
   transition: all 300ms;
 }
-
 .btn-secondary{
   background-image: linear-gradient(to top, $secondary , $primary );
   margin-top: 40px;
@@ -422,8 +433,8 @@ flex: 1;
 .btn-menu:hover{
   background-image: linear-gradient(
     to top,
-    lighten(#FF79DA, 15%),
-    lighten(#9356DC, 15%)
+   color.adjust($secondary, $lightness: 15%),
+   color.adjust($primary, $lightness: 15%),
   );
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
