@@ -396,13 +396,28 @@ text-align: start;
   height: 30px;
   border-radius: 50%;
   background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center ;
 }
 .check-box i {
   color: #99E2D0;
   font-size: 16px;
+}
+/* ANIMATIONS */
+@keyframes slidecheck {
+  from {
+    right: -59px;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes moveprice {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-59px);
+  }
 }
 .card-menu:hover .check-box {
   animation: slidecheck 250ms forwards ease-out;
@@ -410,9 +425,7 @@ text-align: start;
 .card-menu:hover .price-menu {
   animation: moveprice 250ms forwards ease-out;
 }
-.card-menu:hover .check-box i {
-  animation: rotateicon 250ms forwards ease-out;
-}
+
 /*ANIMATION*/
 .btn-menu {
   font-size: 16px;
