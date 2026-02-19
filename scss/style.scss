@@ -17,6 +17,16 @@ $grey-dark: #353535;
 *::after {
   box-sizing: border-box;
 }
+.container {
+  width: 100%;
+  padding: 15px;
+
+  @media (min-width: 1024px) {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -56,6 +66,16 @@ body {
 i {
     color: $grey-dark;
     font-size: 16px;
+  }
+}
+.mobile-br {
+  display: block;
+
+}
+@media (min-width :1024) {
+  .mobile-br{
+   display: none;
+  
   }
 }
 .exploration {
@@ -103,7 +123,9 @@ i {
   margin-top: 15px;
   margin-bottom: 0;
   padding-bottom: 50px;
+   
 }
+
 .section-title {
   display: flex;
   flex-direction: column;
@@ -125,6 +147,10 @@ i {
   font-size: 16px;
   font-weight: 500;
   @include flex-center ;
+  @media (min-width: 1024px) {
+    flex-direction: row;        
+    align-items: flex-start;  
+  }
 }
 .fonctionnement__item span {
   font-size: 16px;
@@ -195,8 +221,8 @@ i {
   line-height: normal;
   width: 80px;
   height: 29px;
-  top:13px;
-  left: 248px;
+  top:15px;
+  right:15px;
   color: #008766; 
   background-color: $tertiary;
   text-align:center;
@@ -327,6 +353,39 @@ background-clip: text;
   text-align: start;
   gap: 25px;
 }
+
+.h4-menu{
+overflow: hidden;
+color: #000;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: 18px;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+}
+.p-menu{
+overflow: hidden;
+color: #000;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin:0;
+flex: 1;
+}
+.price-menu{
+  font-size: 15px;
+  font-weight: 700;
+}
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+}
 .h3-menu{
 width: 275px; 
 height: 27px;
@@ -339,6 +398,7 @@ font-weight: 300;
 line-height: normal;
 text-align: start;
 }
+
 .trait {
   display: inline-block;
   width:40px;
@@ -403,10 +463,10 @@ text-align: start;
     transform: translateX(-59px);
   }
 }
-.card-menu:active .check-box {
+.card-menu:hover .check-box {
   animation: slidecheck 250ms forwards ease-out;
 }
-.card-menu:active .price-menu {
+.card-menu:hover .price-menu {
   animation: moveprice 250ms forwards ease-out;
 }
 
@@ -437,3 +497,5 @@ text-align: start;
   transform: scale(1.05);
   cursor: pointer;
 }
+
+ 

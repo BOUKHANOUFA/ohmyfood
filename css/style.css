@@ -55,6 +55,20 @@ body {
   font-size: 16px;
 }
 
+.separateur-h2-p span {
+  display: block;
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024) {
+  .separateur-h2-p span {
+    display: inline;
+    max-width: none;
+    margin: 0;
+  }
+}
 .exploration {
   flex-direction: column;
   text-align: center;
@@ -217,8 +231,8 @@ body {
   line-height: normal;
   width: 80px;
   height: 29px;
-  top: 13px;
-  left: 248px;
+  top: 15px;
+  right: 15px;
   color: #008766;
   background-color: #99E2D0;
   text-align: center;
@@ -374,6 +388,42 @@ body {
   gap: 25px;
 }
 
+.h4-menu {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.p-menu {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+  flex: 1;
+}
+
+.price-menu {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .h3-menu {
   width: 275px;
   height: 27px;
@@ -460,11 +510,11 @@ body {
     transform: translateX(-59px);
   }
 }
-.card-menu:active .check-box {
+.card-menu:hover .check-box {
   animation: slidecheck 250ms forwards ease-out;
 }
 
-.card-menu:active .price-menu {
+.card-menu:hover .price-menu {
   animation: moveprice 250ms forwards ease-out;
 }
 
