@@ -16,6 +16,7 @@ $grey-dark: #353535;
 *::before,
 *::after {
   box-sizing: border-box;
+ 
 }
 .container {
   width: 100%;
@@ -32,6 +33,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   background-color:white;
+  
  }
 .header {
   font-family: "Shrikhand", serif;
@@ -68,26 +70,28 @@ i {
     font-size: 16px;
   }
 }
-.mobile-br {
-  display: block;
-
+.break-title {
+max-width: 200px;
+@media (min-width: 1024px) {
+  max-width: none;
 }
-@media (min-width :1024) {
-  .mobile-br{
-   display: none;
-  
-  }
 }
 .exploration {
   flex-direction: column;
   text-align: center;
   background-color : $grey-light;
   @include flex-center ;
+  margin-top: 5px;
+  @media (min-width: 1024px) {
+  margin-top: none;
+}
+
 }
 .exploration h2 {
   font-size: 24px;
   font-weight: 700;
   margin-top: 40px;
+  margin-bottom: 0;
 }
 .exploration p {
   font-size: 18px;
@@ -123,17 +127,15 @@ i {
   margin-top: 15px;
   margin-bottom: 0;
   padding-bottom: 50px;
-   
 }
-
 .section-title {
-  display: flex;
-  flex-direction: column;
-  margin-right: 90px;
+  grid-column: 1 / -1;
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
   font-style: normal;
+  margin-top: 0;
+  text-align: left;
  }
 .fonctionnement__item {
   position: relative;
@@ -147,9 +149,15 @@ i {
   font-size: 16px;
   font-weight: 500;
   @include flex-center ;
+  
+}
+.fonctionnement__list{
   @media (min-width: 1024px) {
     flex-direction: row;        
     align-items: flex-start;  
+    display:flex;
+    gap: 25px;
+  
   }
 }
 .fonctionnement__item span {
@@ -185,25 +193,39 @@ i {
   @include flex-center ;
 }
 /*restaurants*/
+html {
+  scroll-behavior: smooth;
+}
 .restaurants {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $grey-light;
-  padding-top: 30px;
+  padding: 30px 0 50px 0;
   width: 100%;
-  padding-bottom: 50px;
-}
+ }
 .restaurants-cards{
   width: 100%;
-  flex-direction: column;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  max-width: 340px;
+  gap: 28px;
   text-decoration: none;
   color: inherit;
   margin-bottom: 18px;
+  max-width: 340px;
+}
+ @media (min-width: 1024px) {
+  .restaurants{
+  display: grid;                   
+  grid-template-columns: 1fr 1fr;  
+  gap: 28px;                        
+  padding: 0 180px 50px 180px;
+  align-items: stretch; 
+}
+.restaurants-cards {
+    max-width: none; 
+    }
   }
 .restaurant-img {
   width:100%;       
@@ -247,15 +269,16 @@ i {
 .heart-regular{
   position: absolute;
   font-size: 22px;
- }
+  pointer-events: none;
+}
  /*ANIMATION*/
 .heart-solid{
   opacity: 0;
   font-size: 22px;
   transition: all 700ms ease-out;
   position: relative;
-}
-.heart-solid:active{
+ }
+.heart-solid:hover{
 opacity: 1;
 color: transparent;
 background-image: linear-gradient(193deg,  $primary 11.44%, $secondary 123.93%);
@@ -269,43 +292,62 @@ background-clip: text;
   padding: 13px;
 }
 .footer {
-  display: flex;
   flex-direction: column;
   background-color: $grey-dark ;
   padding: 22px 25px;
   gap: 16px;
   color: white;
+  @media (min-width: 1024px){
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 30px 25px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 16px;
+  margin: 0 auto;
   }
-.footer-h5 {
+  }
+.footer-h5 {  
   text-align: start;
   font-family: "Shrikhand", serif;
-  margin-bottom: 0;
-  margin-top: 0;
+  justify-content: center;
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 16px;
   gap: 16px;
+  @media (min-width: 1024px){
+  margin-left: auto;
+  width: auto;
+ }
   }
 .footer-links {
+  display: flex;
+  flex-direction: column;
   list-style: none;   
-  margin: 0; 
-  padding: 0;
+  gap: 10px;
+  padding-left: 0;
   line-height: normal;
-  max-width: 400px;        
+  margin: 0;
+  
 }
-.footer-links li {
-  display: flex;      
+  .footer-links li {
+   gap: 16px;
+    justify-self: start;
+  a {
+   text-decoration: none;
+   color: white;
+   text-align: left;
+    }
+  i { 
+      font-size: 18px;
+      color: white;
+      text-align: left;
+    }
+  @media (min-width: 1024px){
+  flex-direction: row;
   align-items: center;
-  gap: 16px;           
-  margin-bottom: 10px;
+  gap: 16px;
 }
-.footer-links li a,
-.footer-contact {
-  text-decoration: none; 
-  color: white;         
-}
-.footer-links li i {
-  font-size: 18px;      
-  color: white;       
 }
 .goback{
  font-size: 30px;
@@ -321,12 +363,11 @@ background-clip: text;
  }
 .menu{
   flex-direction: column;
-  background-color: $grey-light;
-  border-radius: 40px 40px 0 0;
+  
   @include flex-center ;
   }
 .menu-img{
-  width: 375px;
+  width:100%;
   height: 275px;
   object-fit: cover;  
   display: block; 
@@ -353,7 +394,22 @@ background-clip: text;
   text-align: start;
   gap: 25px;
 }
-
+.menu-radius {
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+ position: relative;
+ border-radius: 40px 40px 0 0; 
+ width: 100%;
+ max-width: 1050px ;
+ margin:-50px auto 0 auto ;
+ background-color: $grey-light;
+ padding: 30px 20px;
+ z-index: 2;
+ @media (min-width: 1024px){
+ width: 80%;
+}
+}
 .h4-menu{
 overflow: hidden;
 color: #000;
@@ -376,10 +432,6 @@ font-weight: 300;
 line-height: normal;
 margin:0;
 flex: 1;
-}
-.price-menu{
-  font-size: 15px;
-  font-weight: 700;
 }
 .menu-info {
   display: flex;
@@ -419,14 +471,16 @@ text-align: start;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
+   @media (min-width: 1024px){
+ width: 634px;
 }
-
+}
 .price-menu {
   font-size: 15px;
   font-weight: 700;
-  white-space: nowrap;
+  display: block;
 }
-.check-box {
+ .check-box {
   position: absolute;
   top: 0;
   right: -59px;
@@ -468,6 +522,7 @@ text-align: start;
 }
 .card-menu:hover .price-menu {
   animation: moveprice 250ms forwards ease-out;
+
 }
 
 /*ANIMATION*/
@@ -488,11 +543,7 @@ text-align: start;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .btn-menu:hover{
-  background-image: linear-gradient(
-    to top,
-   color.adjust($secondary, $lightness: 15%),
-   color.adjust($primary, $lightness: 15%),
-  );
+  background-image: linear-gradient(to top , #ff95e3 ,#a078e0) ;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
   cursor: pointer;
