@@ -462,6 +462,47 @@ text-align: start;
   border-bottom: 3px solid $tertiary;
   margin-bottom: 12px;
 }
+/* ANIMATIONS */
+@keyframes slidecheck {
+  from {
+    right: -59px;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes moveprice {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-59px);
+  }
+}
+@keyframes slidecheck-back {
+  from {
+    right: 0;
+  }
+  to {
+    right: -59px;
+  }
+}
+@keyframes moveprice-back {
+  from {
+    transform: translateX(-59px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.card-menu:hover .check-box {
+  animation: slidecheck 250ms forwards ease-out;
+}
+.card-menu:hover .price-menu {
+  animation: moveprice 250ms forwards ease-out;
+
+}
+
 .card-menu {
   position: relative;
   display: flex;
@@ -479,6 +520,10 @@ text-align: start;
    @media (min-width: 1024px){
  width: 634px;
 }
+}
+.menu-info{
+  flex: 1;
+  min-width: 0;
 }
 .price-menu {
   font-size: 15px;
@@ -504,30 +549,6 @@ text-align: start;
 .check-box i {
   color: #99E2D0;
   font-size: 16px;
-}
-/* ANIMATIONS */
-@keyframes slidecheck {
-  from {
-    right: -59px;
-  }
-  to {
-    right: 0;
-  }
-}
-@keyframes moveprice {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-59px);
-  }
-}
-.card-menu:hover .check-box {
-  animation: slidecheck 250ms forwards ease-out;
-}
-.card-menu:hover .price-menu {
-  animation: moveprice 250ms forwards ease-out;
-
 }
 
 /*ANIMATION*/
