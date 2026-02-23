@@ -145,7 +145,7 @@ body {
   line-height: normal;
   font-style: normal;
   margin-top: 0;
-  text-align: left;
+  align-self: start;
 }
 
 .fonctionnement__item {
@@ -336,6 +336,7 @@ html {
 }
 @media (min-width: 1024px) {
   .footer {
+    display: flex;
     flex-direction: row-reverse;
     width: 100%;
     padding: 30px 25px;

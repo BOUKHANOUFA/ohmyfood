@@ -135,7 +135,8 @@ max-width: 200px;
   line-height: normal;
   font-style: normal;
   margin-top: 0;
-  text-align: left;
+  
+  align-self: start;
  }
 .fonctionnement__item {
   position: relative;
@@ -298,6 +299,7 @@ background-clip: text;
   gap: 16px;
   color: white;
   @media (min-width: 1024px){
+  display: flex;
   flex-direction: row-reverse;
   width: 100%;
   padding: 30px 25px;
