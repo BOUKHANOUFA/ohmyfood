@@ -359,6 +359,7 @@ html {
   .footer-h5 {
     margin-left: auto;
     width: auto;
+    flex-direction: row-reverse;
   }
 }
 
@@ -370,6 +371,11 @@ html {
   padding-left: 0;
   line-height: normal;
   margin: 0;
+}
+@media (min-width: 1024px) {
+  .footer-links {
+    flex-direction: row;
+  }
 }
 
 .footer-links li {

@@ -318,6 +318,7 @@ background-clip: text;
   @media (min-width: 1024px){
   margin-left: auto;
   width: auto;
+  flex-direction: row-reverse;
  }
   }
 .footer-links {
@@ -328,7 +329,9 @@ background-clip: text;
   padding-left: 0;
   line-height: normal;
   margin: 0;
-  
+  @media (min-width: 1024px){
+    flex-direction: row;
+  }
 }
   .footer-links li {
    gap: 16px;
