@@ -293,13 +293,14 @@ background-clip: text;
   padding: 13px;
 }
 .footer {
+  display: flex;
   flex-direction: column;
   background-color: $grey-dark ;
   padding: 22px 25px;
   gap: 16px;
   color: white;
   @media (min-width: 1024px){
-  display: flex;
+  
   flex-direction: row-reverse;
   width: 100%;
   padding: 30px 25px;
@@ -333,6 +334,7 @@ background-clip: text;
   margin: 0;
   @media (min-width: 1024px){
     flex-direction: row;
+    
   }
 }
   .footer-links li {

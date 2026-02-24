@@ -328,6 +328,7 @@ html {
 }
 
 .footer {
+  display: flex;
   flex-direction: column;
   background-color: #353535;
   padding: 22px 25px;
@@ -336,7 +337,6 @@ html {
 }
 @media (min-width: 1024px) {
   .footer {
-    display: flex;
     flex-direction: row-reverse;
     width: 100%;
     padding: 30px 25px;
