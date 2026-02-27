@@ -28,13 +28,64 @@ $grey-dark: #353535;
     padding: 0;
   }
 }
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   background-color:white;
   
  }
+/* Loader */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, $primary, $secondary); 
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+ 
+  animation: fadeOut 0.8s ease 2s forwards;
+}
+
+.loader-content {
+  text-align: center;
+  color: white;
+}
+
+.loader-logo {
+  font-family: "Shrikhand", serif; 
+  font-size: 36px;
+  margin-bottom: 30px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255,255,255,0.3);
+  border-top: 5px solid $tertiary; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
 .header {
   font-family: "Shrikhand", serif;
   font-size: 30px;
@@ -53,6 +104,7 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25); 
    margin: 0;
    @include flex-center;
+  
 }
 .localisation__form {
   height: 50px;
@@ -61,7 +113,7 @@ body {
   input {
     border: none;
     background-color: #EAEAEA;
-    width: 100%;
+    width: 117px;
     height: 100%;
     font-size: 16px;
   }
@@ -109,7 +161,7 @@ max-width: 200px;
   transition: all 300ms ease-out;
 }
 .btn-primary{
- background-image: linear-gradient(to top, $secondary, $primary );
+  background-image: linear-gradient(to top, $secondary, $primary );
   margin-top: 15px;
   margin-bottom: 60px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -127,6 +179,11 @@ max-width: 200px;
   margin-top: 15px;
   margin-bottom: 0;
   padding-bottom: 50px;
+   
+   @media (min-width: 1024px) {
+  padding: 0 180px 50px 180px;
+ }
+  
 }
 .section-title {
   grid-column: 1 / -1;
@@ -134,10 +191,13 @@ max-width: 200px;
   font-weight: 700;
   line-height: normal;
   font-style: normal;
-  margin-top: 0;
-  
+  padding-left: 15px;
   align-self: start;
- }
+   @media (min-width: 1024px) {
+    padding-left: 0;
+   }
+ 
+}
 .fonctionnement__item {
   position: relative;
   width: 322px;
@@ -158,7 +218,7 @@ max-width: 200px;
     align-items: flex-start;  
     display:flex;
     gap: 25px;
-  
+    
   }
 }
 .fonctionnement__item span {
@@ -226,14 +286,14 @@ html {
 }
 .restaurants-cards {
     max-width: none; 
-    }
   }
+}
 .restaurant-img {
   width:100%;       
   height:231px;      
   object-fit: cover;  
   display: block; 
-  }    
+}    
 .new {
   border: none;
   position: relative
@@ -270,9 +330,8 @@ html {
 .heart-regular{
   position: absolute;
   font-size: 22px;
-  pointer-events: none;
+ 
 }
- /*ANIMATION*/
 .heart-solid{
   opacity: 0;
   font-size: 22px;
@@ -300,30 +359,30 @@ background-clip: text;
   gap: 16px;
   color: white;
   @media (min-width: 1024px){
-  
   flex-direction: row-reverse;
   width: 100%;
   padding: 30px 25px;
-  align-items: flex-end;
-  justify-content: flex-end;
+  
+  align-items: center;
   gap: 16px;
   margin: 0 auto;
   }
-  }
+}
 .footer-h5 {  
   text-align: start;
+  
   font-family: "Shrikhand", serif;
   justify-content: center;
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 16px;
   gap: 16px;
   @media (min-width: 1024px){
-  margin-left: auto;
   width: auto;
   flex-direction: row-reverse;
- }
+  margin-right: 40px;
+  
   }
+}
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -334,6 +393,8 @@ background-clip: text;
   margin: 0;
   @media (min-width: 1024px){
     flex-direction: row;
+    gap: 20px;
+    margin: 30px;
     
   }
 }
@@ -344,17 +405,19 @@ background-clip: text;
    text-decoration: none;
    color: white;
    text-align: left;
-    }
+  }
   i { 
       font-size: 18px;
       color: white;
       text-align: left;
-    }
+      
+  }
   @media (min-width: 1024px){
   flex-direction: row;
   align-items: center;
-  gap: 16px;
-}
+  gap:16px;
+  margin: 20px;
+  }
 }
 .goback{
  font-size: 30px;
@@ -363,16 +426,16 @@ background-clip: text;
  position: absolute;
  top: 14px;
  z-index: 10;
- }
+}
  .goback i {
   pointer-events: auto;
   color: #000;
- }
+}
 .menu{
   flex-direction: column;
   
   @include flex-center ;
-  }
+}
 .menu-img{
   width:100%;
   height: 275px;
@@ -384,7 +447,7 @@ background-clip: text;
   position: relative;
   width: 22px;
   height: 22px;
- }
+}
 .title-coeur .heart-regular,
 .title-coeur .heart-solid {
   position: absolute; 
@@ -415,7 +478,7 @@ background-clip: text;
  z-index: 2;
  @media (min-width: 1024px){
  width: 80%;
-}
+  }
 }
 .h4-menu{
 overflow: hidden;
@@ -444,6 +507,9 @@ flex: 1;
   display: flex;
   flex-direction: column;
   gap: 5px; 
+  flex: 1;
+  min-width: 0;
+  transition: padding-right 250ms ease-out;
 }
 .h3-menu{
 width: 275px; 
@@ -457,52 +523,24 @@ font-weight: 300;
 line-height: normal;
 text-align: start;
 }
-
 .trait {
   display: inline-block;
   width:40px;
   border-bottom: 3px solid $tertiary;
   margin-bottom: 12px;
 }
-/* ANIMATIONS */
-@keyframes slidecheck {
-  from {
-    right: -59px;
-  }
-  to {
-    right: 0;
-  }
-}
-@keyframes moveprice {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-59px);
-  }
-}
-@keyframes slidecheck-back {
-  from {
-    right: 0;
-  }
-  to {
-    right: -59px;
-  }
-}
-@keyframes moveprice-back {
-  from {
-    transform: translateX(-59px);
-  }
-  to {
-    transform: translateX(0);
-  }
+.check-box {
+  right: -59px;
+  transition: right 250ms ease-out;
 }
 .card-menu:hover .check-box {
-  animation: slidecheck 250ms forwards ease-out;
+  right: 0;
 }
-.card-menu:hover .price-menu {
-  animation: moveprice 250ms forwards ease-out;
-
+.card-menu:hover .menu-info {
+  padding-right: 59px;
+  }
+  .card-menu:hover .price-menu {
+  margin-right: 59px;
 }
 
 .card-menu {
@@ -521,16 +559,19 @@ text-align: start;
   cursor: pointer;
    @media (min-width: 1024px){
  width: 634px;
+  }
 }
-}
-.menu-info{
-  flex: 1;
-  min-width: 0;
-}
+
 .price-menu {
   font-size: 15px;
   font-weight: 700;
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: margin-right 250ms ease-out; 
+  margin-right: 0; 
+
 }
  .check-box {
   position: absolute;
@@ -552,8 +593,6 @@ text-align: start;
   color: #99E2D0;
   font-size: 16px;
 }
-
-/*ANIMATION*/
 .btn-menu {
   font-size: 16px;
   font-weight: 500;
