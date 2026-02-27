@@ -135,7 +135,7 @@ max-width: 200px;
   @include flex-center ;
   margin-top: 5px;
   @media (min-width: 1024px) {
-  margin-top: none;
+  margin-top: 0;
 }
 
 }
@@ -149,8 +149,14 @@ max-width: 200px;
   font-size: 18px;
   font-weight: 300;
 }
-/*ANIMATION*/
+.btn-container {
+  text-align: center;
+}
 .btn-home {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;  
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -158,6 +164,7 @@ max-width: 200px;
   width: 218px;
   border-radius: 25px;
   border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: all 300ms ease-out;
 }
 .btn-primary{
@@ -191,7 +198,7 @@ max-width: 200px;
   font-weight: 700;
   line-height: normal;
   font-style: normal;
-  padding-left: 15px;
+  padding-left: 30px;
   align-self: start;
    @media (min-width: 1024px) {
     padding-left: 0;
@@ -319,8 +326,8 @@ html {
 }
 .restaurants-h4 {
   margin: 0;
-  font-size:18px ;
-  font-weight:700;
+  font-size: 18px ;
+  font-weight: 700;
 }
 .restaurants-p {
   margin: 0;
@@ -362,7 +369,6 @@ background-clip: text;
   flex-direction: row-reverse;
   width: 100%;
   padding: 30px 25px;
-  
   align-items: center;
   gap: 16px;
   margin: 0 auto;
@@ -370,7 +376,6 @@ background-clip: text;
 }
 .footer-h5 {  
   text-align: start;
-  
   font-family: "Shrikhand", serif;
   justify-content: center;
   font-size: 18px;
