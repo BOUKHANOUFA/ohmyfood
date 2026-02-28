@@ -370,14 +370,7 @@ background-clip: text;
   padding: 22px 25px;
   gap: 16px;
   color: white;
-  @media (min-width: 1024px){
-  flex-direction: row-reverse;
-  width: 100%;
-  padding: 30px 25px;
-  align-items: center;
-  gap: 16px;
-  margin: 0 auto;
-  }
+  
 }
 .footer-h5 {  
   text-align: start;
@@ -390,6 +383,7 @@ background-clip: text;
   width: auto;
   flex-direction: row-reverse;
   margin-right: 40px;
+  margin-left: 40px;
   
   }
 }
@@ -401,12 +395,7 @@ background-clip: text;
   padding-left: 0;
   line-height: normal;
   margin: 0;
-  @media (min-width: 1024px){
-    flex-direction: row;
-    gap: 20px;
-    margin: 30px;
-    
-  }
+  
 }
   .footer-links li {
    gap: 16px;
@@ -422,12 +411,39 @@ background-clip: text;
       text-align: left;
       
   }
-  @media (min-width: 1024px){
-  flex-direction: row;
-  align-items: center;
-  gap:16px;
-  margin: 20px;
+ 
+  .footer-links li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
+}
+@media (min-width: 1024px) {
+
+  .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  
+  .footer-links li:nth-child(2) {
+    margin-right: 40px;
+  }
+
+ 
+  .footer-links li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
 }
 .goback{
  font-size: 30px;
