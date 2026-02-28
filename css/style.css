@@ -23,6 +23,12 @@ body {
 }
 
 /* Loader */
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .loader {
   position: fixed;
   inset: 0;
