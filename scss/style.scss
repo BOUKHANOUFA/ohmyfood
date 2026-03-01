@@ -32,8 +32,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   background-color:white;
-  
- }
+}
 /* Loader */
 .loader-content {
   display: flex;
@@ -45,27 +44,20 @@ body {
   inset: 0;
   background: linear-gradient(135deg, $primary, $secondary); 
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  
- 
+  @include flex-center ;
   animation: fadeOut 0.8s ease 2s forwards;
 }
-
 .loader-content {
   text-align: center;
   color: white;
 }
-
 .loader-logo {
   font-family: "Shrikhand", serif; 
   font-size: 36px;
   margin-bottom: 30px;
   animation: pulse 1.5s ease-in-out infinite;
 }
-
 .loader-spinner {
   width: 60px;
   height: 60px;
@@ -74,23 +66,19 @@ body {
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
-
 /* Animations */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
 }
-
 @keyframes fadeOut {
   0% { opacity: 1; visibility: visible; }
   100% { opacity: 0; visibility: hidden; }
 }
-
 .header {
   font-family: "Shrikhand", serif;
   font-size: 30px;
@@ -142,7 +130,6 @@ max-width: 200px;
   @media (min-width: 1024px) {
   margin-top: 0;
 }
-
 }
 .exploration h2 {
   font-size: 24px;
@@ -208,8 +195,7 @@ max-width: 200px;
    @media (min-width: 1024px) {
     padding-left: 0;
    }
- 
-}
+ }
 .fonctionnement__item {
   position: relative;
   width: 322px;
@@ -222,7 +208,6 @@ max-width: 200px;
   font-size: 16px;
   font-weight: 500;
   @include flex-center ;
-  
 }
 .fonctionnement__list{
   @media (min-width: 1024px) {
@@ -324,7 +309,7 @@ html {
   font-weight: 500;
   font-size: 14px;
   @include flex-center ;
-  }
+}
   .restaurants-cards a {
   text-decoration: none; 
   color: inherit;      
@@ -370,7 +355,6 @@ background-clip: text;
   padding: 22px 25px;
   gap: 16px;
   color: white;
-  
 }
 .footer-h5 {  
   text-align: start;
@@ -395,8 +379,7 @@ background-clip: text;
   padding-left: 0;
   line-height: normal;
   margin: 0;
-  
-}
+  }
   .footer-links li {
    gap: 16px;
     justify-self: start;
@@ -419,31 +402,24 @@ background-clip: text;
   }
 }
 @media (min-width: 1024px) {
-
-  .footer {
+.footer {
     flex-direction: row-reverse;
     align-items: center;
   }
-
-  .footer-links {
+.footer-links {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
   }
-
-  
-  .footer-links li:nth-child(2) {
+.footer-links li:nth-child(2) {
     margin-right: 40px;
   }
-
- 
-  .footer-links li {
+.footer-links li {
     display: flex;
     align-items: center;
     gap: 8px;
   }
-
 }
 .goback{
  font-size: 30px;
@@ -568,7 +544,6 @@ text-align: start;
   .card-menu:hover .price-menu {
   margin-right: 59px;
 }
-
 .card-menu {
   position: relative;
   display: flex;
@@ -587,7 +562,6 @@ text-align: start;
  width: 634px;
   }
 }
-
 .price-menu {
   font-size: 15px;
   font-weight: 700;
@@ -597,7 +571,6 @@ text-align: start;
   white-space: nowrap;
   transition: margin-right 250ms ease-out; 
   margin-right: 0; 
-
 }
  .check-box {
   position: absolute;
